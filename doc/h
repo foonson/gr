@@ -1,0 +1,33 @@
+-
+
+dnf update kernel*
+reboot
+
+mkdir /media/VBGA
+mount -r /dev/cdrom /media/VBGA
+
+dnf install gcc kernel-devel kernel-headers dkms make bzip2 perl
+
+export KERN_DIR=/usr/src/kernels/........fc24.x86_64
+
+cd /media/VBGA
+./VBoxLinuxAdditions.run
+
+dnf install fluxbox xterm xorg-x11-\*
+dnf search ifconfig
+dnf install tmux.x86_64
+dnf install net-tools git.x86_64 
+
+/etc/default/grub
+/etc/grub.d/00_header
+grub2-mkconfig -o /boot/grub2/grub.cfg
+
+hostnamectl set-hostname --static fedora1
+
+ln -s gr/doc/h h
+ln -s gr/config/.tmux.conf .tmux.conf
+
+add to .bash_profile
+source gr/config.profile
+
+git init

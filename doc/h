@@ -1,4 +1,6 @@
--
+
+# Linux setup
+## VirtualBox addition
 
 dnf update kernel*
 reboot
@@ -13,16 +15,32 @@ export KERN_DIR=/usr/src/kernels/........fc24.x86_64
 cd /media/VBGA
 ./VBoxLinuxAdditions.run
 
+## mount
+/media/sf_mac
+usermod -aG vboxsf steve
+mount.vboxsf mac ~/mac
+
+## dnf packages
+
 dnf install fluxbox xterm xorg-x11-\*
 dnf search ifconfig
 dnf install tmux.x86_64
-dnf install net-tools git.x86_64 
+dnf install net-tools git.x86_64 gcc-c++.x86_64 
+# dnf install hwinfo -- not for fedora
+dnf install lshw
+dnf install SDL2-devel
+
+## grub
 
 /etc/default/grub
 /etc/grub.d/00_header
 grub2-mkconfig -o /boot/grub2/grub.cfg
 
+## network setup
+
 hostnamectl set-hostname --static fedora1
+
+## profile setup
 
 ln -s gr/doc/h h
 ln -s gr/config/.tmux.conf .tmux.conf
@@ -30,4 +48,18 @@ ln -s gr/config/.tmux.conf .tmux.conf
 add to .bash_profile
 source gr/config.profile
 
+# git
+## git initial setup
 git init
+git config --global user.email "foonson2000@yahoo.com.hk"
+git config --global user.name "Steve Cheng"
+git remote add origin https://github.com/foonson/gr.git
+git commit -m "20161103"
+git push origin master
+
+## git local setup
+git clone https://github.com/foonson/gt.git
+
+
+# Apple
+defaults write com.apple.finder AppleShowAllFiles TRUE

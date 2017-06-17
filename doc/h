@@ -44,6 +44,8 @@ hostnamectl set-hostname --static fedora1
 
 ln -s gr/doc/h h
 ln -s gr/config/.tmux.conf .tmux.conf
+ln -s gr/config/.Xresources .Xresources
+
 
 add to .bash_profile
 source gr/config.profile

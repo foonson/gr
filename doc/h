@@ -29,6 +29,7 @@ dnf install net-tools git.x86_64 gcc-c++.x86_64
 # dnf install hwinfo -- not for fedora
 dnf install lshw
 dnf install SDL2-devel
+dnf install vim-enhanced
 
 ## grub
 
@@ -60,8 +61,13 @@ git commit -m "20161103"
 git push origin master
 
 ## git local setup
-git clone https://github.com/foonson/gt.git
+git clone https://github.com/foonson/gt.git gt-clone
 
+# X
+xset r rate 50 100
 
 # Apple
 defaults write com.apple.finder AppleShowAllFiles TRUE
+
+# shell
+find -name *.swp -exec {} \;

@@ -1,4 +1,5 @@
 #include "tick.h"
+#include <thread>  // this_thread::sleep
 
 Tick::Tick() {
   _interval = 0;
@@ -23,6 +24,11 @@ bool Tick::pass() {
     return true;
   }
   return false;
+}
+
+void Tick::sleep() {
+  // TODO sleep residual time
+  std::this_thread::sleep_for(std::chrono::milliseconds(_interval));
 }
 
 void Tick::force() {

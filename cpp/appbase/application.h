@@ -49,8 +49,8 @@ public:
 
 protected:
   bool _exit;
-  Tick _evalTick;
-  Tick _renderTick;
+  //Tick _evalTick;
+  //Tick _renderTick;
 
 private:
   //Screen _screen;

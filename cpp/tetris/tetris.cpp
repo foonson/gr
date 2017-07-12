@@ -1,12 +1,11 @@
 
 #include "pch.h"
-#include "sdl/sdl.h"
-#include "appbase/application.h"
-#include "tetrisApp.h"
+//#include "sdl/sdl.h"
+#include "tApp.h"
 
 int main() {
   std::cout << "tetris" << std::endl;
-  TetrisApp app;
+  tetris::TApp app;
   app.initialize();
   app.startThreads();
 }

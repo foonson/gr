@@ -1,13 +1,18 @@
-#ifndef _TETRIS_PCH_H
-#define _TETRIS_PCH_H
+#ifndef _TETRIS_PCH
+#define _TETRIS_PCH
 
-#include <SDL.h>
 #include <iostream>
-#include <experimental/optional>
 #include <string>
 #include <sstream>
+#include <thread>
+#include <vector>
+#include <map>
 
+#include <experimental/optional>
 using std::experimental::optional;
 using std::experimental::nullopt;
+
+// SDL
+#include <SDL.h>
 
 #endif

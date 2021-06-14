@@ -2,6 +2,7 @@
 #define _SDL_SDL_H
 
 #include "SDL.h"
+#include "SDL_image.h"
 
 //template <typename T>
 class SDL {

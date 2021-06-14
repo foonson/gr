@@ -74,7 +74,7 @@ void TApp::inputLoop() {
 
     if (event.type==SDL_KEYDOWN) {
       //std::cout << "keydown\n";
-      std::cout << event.key.keysym.sym << "\n";
+      //std::cout << event.key.keysym.sym << "\n";
       _rawEvents.put(usdl::fromSDLKeyEvent(event));
 
     //} else if (event.type==SDL_KEYUP) {

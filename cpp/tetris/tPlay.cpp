@@ -77,19 +77,22 @@ void TPlay::land() {
     }
   }
 
-  if (mark==1) { _score += 1; }
-  else if (mark==2) { _score += 4; }
-  else if (mark==3) { _score += 9; }
-  else if (mark==4) { _score += 20; }
+  int delta = 0;
+  if (mark==1) { delta = 10; }
+  else if (mark==2) { delta = 40; }
+  else if (mark==3) { delta = 90; }
+  else if (mark==4) { delta = 200; }
+  else { delta = 1;}
+  _score += delta;
   _line += mark;
 
   int speed = 1000 - _line * 50;
   if (speed<200) { speed = 200; }
   _tPlayEval.interval(speed); 
 
-  if (mark>0) {
-    printf("Score: %d\n", _score);
-  }
+  //if (mark>0) {
+    printf("%s: +%d [%d]\n", _name.c_str(), delta, _score);
+  //}
   
 }
 

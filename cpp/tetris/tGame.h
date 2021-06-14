@@ -39,11 +39,13 @@ public:
     rp0.mapKeyAction(97,  ACTION::LEFT); // a
     rp0.mapKeyAction(100, ACTION::RIGHT); // d
     rp0.mapKeyAction(115, ACTION::DOWN); // s
+    rp0.name("Naruto");
 
     rp1.mapKeyAction(1073741906, ACTION::UP); 
     rp1.mapKeyAction(1073741904, ACTION::LEFT); 
     rp1.mapKeyAction(1073741903, ACTION::RIGHT); 
     rp1.mapKeyAction(1073741905, ACTION::DOWN); 
+    rp1.name("Luffy");
 
     
   }

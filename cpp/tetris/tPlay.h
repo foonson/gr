@@ -41,6 +41,8 @@ public:
   ShapeSet& rShapeSet() { return *_pShapeSet; }
   const Shape& rShape() { return *_pShape; }
 
+  void name(const std::string& name_) { _name = name_; }
+
   Board<char, Color>& board() { return _board; }
 
   TPlayEval _tPlayEval;
@@ -57,6 +59,7 @@ private:
   int iShapeIndex;
   int _score {0};
   int _line {0};
+  std::string _name;
 
 };
 }

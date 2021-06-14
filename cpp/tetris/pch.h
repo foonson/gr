@@ -8,9 +8,9 @@
 #include <vector>
 #include <map>
 
-#include <experimental/optional>
-using std::experimental::optional;
-using std::experimental::nullopt;
+#include <optional>
+using std::optional;
+using std::nullopt;
 
 // SDL
 #include <SDL.h>
